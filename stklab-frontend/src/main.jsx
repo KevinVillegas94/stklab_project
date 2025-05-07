@@ -1,5 +1,6 @@
 import React from 'react'; // Import React
-// ... rest of your main.jsx code ...
+import App from './App';
+
 import { AuthProvider } from './auth/AuthContext'
 import ReactDOM from 'react-dom/client'
 
