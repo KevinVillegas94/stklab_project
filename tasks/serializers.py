@@ -1,14 +1,8 @@
 from rest_framework import serializers
-from .models import Task, Category
-
-class CategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = '__all__'
+from .models import Task
 
 class TaskSerializer(serializers.ModelSerializer):
-    category = CategorySerializer()
-
     class Meta:
         model = Task
         fields = '__all__'
+        read_only_fields = ['id', 'owner', 'created_at']
