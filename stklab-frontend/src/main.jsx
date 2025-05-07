@@ -1,10 +1,12 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import React from 'react'
+import React from 'react'; // Import React
+// ... rest of your main.jsx code ...
+import { AuthProvider } from './auth/AuthContext'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </React.StrictMode>
 )
