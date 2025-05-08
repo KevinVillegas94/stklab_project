@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     const response = await axios.post('/token/', { username, password });
     const { access } = response.data;
 
-    const profileRes = await axios.get('/users/me/', {
+    const profileRes = await axios.get('/users/', {
       headers: { Authorization: `Bearer ${access}` }
     });
 

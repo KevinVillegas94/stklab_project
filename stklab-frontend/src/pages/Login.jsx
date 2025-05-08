@@ -22,8 +22,8 @@ function Login() {
     <div className="container mt-5">
       <h2>Iniciar Sesión</h2>
       <form onSubmit={handleSubmit}>
-        <input className="form-control mb-2" type="text" value={username} placeholder="Usuario" onChange={e => setUsername(e.target.value)} />
-        <input className="form-control mb-2" type="password" value={password} placeholder="Contraseña" onChange={e => setPassword(e.target.value)} />
+        <input className="form-control mb-2" type="text" autoComplete="current-username" value={username} placeholder="Usuario" onChange={e => setUsername(e.target.value)} />
+        <input className="form-control mb-2" type="password" autoComplete="current-password" value={password} placeholder="Contraseña" onChange={e => setPassword(e.target.value)} />
         <button className="btn btn-primary" type="submit">Entrar</button>
       </form>
     </div>
